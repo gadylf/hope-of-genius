@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Police principale */
+    --font-redhat: 'Red Hat Display', sans-serif;
+    
+    /* Couleurs principales */
+    --darkgreen-600: 162 100% 13%;
+    --yellow-400: 51 100% 50%;
+    --white: 0 0% 100%;
+    
+    /* Variables système */
+    --background: var(--darkgreen-600);
+    --foreground: var(--white);
+    
+    /* Composants UI */
+    --card: var(--white);
+    --card-foreground: var(--darkgreen-600);
+    --popover: var(--white);
+    --popover-foreground: var(--darkgreen-600);
+    --navigation-height: 4rem;
+    --navigation-menu-bg: 0 0% 100%;
+    --navigation-menu-fg: 222.2 84% 4.9%;
+    
+    /* Actions */
+    --primary: var(--darkgreen-600);
+    --primary-foreground: var(--white);
+    --secondary: var(--yellow-400);
+    --secondary-foreground: var(--darkgreen-600);
+    
+    /* États UI */
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: var(--yellow-400);
+    --accent-foreground: var(--darkgreen-600);
+    
+    /* Bordures et inputs */
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: var(--yellow-400);
+    --radius: 0.5rem;
+  }
+
+  /* Thème sombre */
+  .dark {
+    --background: var(--darkgreen-600);
+    --foreground: var(--white);
+    /* ... autres variables du thème sombre ... */
+  }
+}
+
+/* Styles de base */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    font-family: var(--font-redhat);
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Composants réutilisables */
+@layer components {
+  .btn-primary {
+    @apply bg-yellow-400 text-darkgreen-600 px-4 py-2 rounded-full 
+           hover:bg-yellow-500 transition-colors duration-200
+           font-semibold shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/10 text-white px-4 py-2 rounded-full
+           hover:bg-white/20 transition-colors duration-200;
+  }
+  
+  .nav-link {
+    @apply hover:bg-white/10 px-4 py-2 rounded-md transition-colors duration-200;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold mb-6;
+  }
+
+  .NavigationMenuContent {
+    position: absolute;
+    top: calc(var(--navigation-height) - 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .NavigationMenuViewport {
+    position: relative;
+    transform-origin: top center;
+    width: var(--radix-navigation-menu-viewport-width);
+    height: var(--radix-navigation-menu-viewport-height);
+    transition: width, height, 300ms ease;
+  }
+}
