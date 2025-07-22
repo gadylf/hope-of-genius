@@ -36,7 +36,7 @@ export default function Navbar() {
             <NavigationMenuTrigger>Notre gouvernance</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[300px] gap-4 p-4">
-                <ListItem href="/gouvernance" title="Vue d'ensemble">
+                <ListItem href="/gouvernance" title="Vue d&apos;ensemble">
                   Découvrez notre structure et notre vision
                 </ListItem>
                 <ListItem href="/gouvernance/equipe" title="Notre équipe">
@@ -60,7 +60,7 @@ export default function Navbar() {
             <NavigationMenuContent>
               <ul className="grid w-[300px] gap-4 p-4">
                 <ListItem href="/clubs" title="Tous nos clubs">
-                  Découvrez l'ensemble de nos clubs
+                  Découvrez l&apos;ensemble de nos clubs
                 </ListItem>
                 <ListItem href="/clubs/activites" title="Activités">
                   Les programmes et événements

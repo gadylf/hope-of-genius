@@ -21,8 +21,8 @@ export default function Footer() {
             </Link>
             <p className="text-gray-300 pr-8">
               À la Fondation HOPE OF GENIUS, nous croyons que chaque esprit 
-              brillant mérite une chance d'éclore. Nous révélons, formons et 
-              accompagnons les talents exceptionnels pour qu'ils transforment 
+              brillant mérite une chance d&apos;éclore. Nous révélons, formons et 
+              accompagnons les talents exceptionnels pour qu&apos;ils transforment 
               le monde.
             </p>
           </div>
