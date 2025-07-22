@@ -10,13 +10,13 @@ export default function Home() {
           <div className="text-white max-w-2xl">
             <h1 className="text-7xl font-bold mb-6 leading-tight">
               Là où brille le talent,{' '}
-              <span className="text-yellow-400">l'espoir grandit</span>
+              <span className="text-yellow-400">l&apos;espoir grandit</span>
             </h1>
             <p className="text-xl mb-8 leading-relaxed">
-              Chaque enfant que nous révélons aujourd'hui est un{' '}
+              Chaque enfant que nous révélons aujourd&apos;hui est un{' '}
               <span className="font-bold">génie en puissance, porteur de solutions pour demain</span>.{' '}
-              En investissant dans l'intelligence des plus démunis, nous bâtissons{' '}
-              <span className="font-bold">un avenir fondé sur le mérite, la justice et l'excellence</span>.
+              En investissant dans l&apos;intelligence des plus démunis, nous bâtissons{' '}
+              <span className="font-bold">un avenir fondé sur le mérite, la justice et l&apos;excellence</span>.
             </p>
             <Link
               href="/parrainer"
@@ -72,9 +72,9 @@ export default function Home() {
             Des <span className="text-green-700">perles rares</span> soigneusement sélectionnées dans des <span className="text-green-700">sols pauvres</span>
           </h2>
           <p className="text-lg leading-relaxed mb-10 font-semibold text-gray-800">
-            Dans les quartiers oubliés, les villages reculés, les familles qui luttent chaque jour pour survivre, vivent des enfants à l'intelligence fulgurante.
+            Dans les quartiers oubliés, les villages reculés, les familles qui luttent chaque jour pour survivre, vivent des enfants à l&apos;intelligence fulgurante.
             Des esprits brillants, invisibles aux radars classiques. À la HOPE OF GENIUS FOUNDATION, nous ne cherchons pas les meilleurs dossiers scolaires ni les écoles cotées, 
-            les acquis du tableau, ni l'âge d'apprendre malgré tout. Nous les révélons, un par un, avec exigence et bienveillance. 
+            les acquis du tableau, ni l&apos;âge d&apos;apprendre malgré tout. Nous les révélons, un par un, avec exigence et bienveillance. 
             Ce sont des perles rares, que la pauvreté ne doit plus ensevelir.
           </p>
           <blockquote className="text-xl font-semibold text-green-700 mb-10">
