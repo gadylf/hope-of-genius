@@ -1,6 +1,100 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-darkgreen-600: #065b3c;
+  --color-darkgreen-700: #063127;
+
+  --color-yellow-400: #ffd700;
+  --color-yellow-500: #ffc700;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* Composants réutilisables */
+@utility btn-primary {
+  @apply bg-yellow-400 text-darkgreen-600 px-4 py-2 rounded-full 
+           hover:bg-yellow-500 transition-colors duration-200
+           font-semibold shadow-xs;
+}
+@utility btn-secondary {
+  @apply bg-white/10 text-white px-4 py-2 rounded-full
+           hover:bg-white/20 transition-colors duration-200;
+}
+@utility nav-link {
+  @apply hover:bg-white/10 px-4 py-2 rounded-md transition-colors duration-200;
+}
+@utility section-title {
+  @apply text-3xl font-bold mb-6;
+}
+
 
 @layer base {
   :root {
@@ -58,42 +152,5 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-  }
-}
-
-/* Composants réutilisables */
-@layer components {
-  .btn-primary {
-    @apply bg-yellow-400 text-darkgreen-600 px-4 py-2 rounded-full 
-           hover:bg-yellow-500 transition-colors duration-200
-           font-semibold shadow-sm;
-  }
-  
-  .btn-secondary {
-    @apply bg-white/10 text-white px-4 py-2 rounded-full
-           hover:bg-white/20 transition-colors duration-200;
-  }
-  
-  .nav-link {
-    @apply hover:bg-white/10 px-4 py-2 rounded-md transition-colors duration-200;
-  }
-  
-  .section-title {
-    @apply text-3xl font-bold mb-6;
-  }
-
-  .NavigationMenuContent {
-    position: absolute;
-    top: calc(var(--navigation-height) - 1rem);
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .NavigationMenuViewport {
-    position: relative;
-    transform-origin: top center;
-    width: var(--radix-navigation-menu-viewport-width);
-    height: var(--radix-navigation-menu-viewport-height);
-    transition: width, height, 300ms ease;
   }
 }
