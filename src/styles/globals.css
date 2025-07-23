@@ -4,9 +4,6 @@
 
 @layer base {
   :root {
-    /* Police principale */
-    --font-redhat: 'Red Hat Display', sans-serif;
-    
     /* Couleurs principales */
     --darkgreen-600: 162 100% 13%;
     --yellow-400: 51 100% 50%;
@@ -57,10 +54,7 @@
   * {
     @apply border-border;
   }
-  
-  html {
-    font-family: var(--font-redhat);
-  }
+
   
   body {
     @apply bg-background text-foreground antialiased;
